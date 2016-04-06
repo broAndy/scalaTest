@@ -1,0 +1,18 @@
+
+
+// Inserting:
+transactional {
+  val person = new Person("John", "Lennon", "john@lennon.org")
+}
+
+// Mapping:
+class Person(
+  var name: String,
+  var surname: String,
+  var email: String) extends Entity
+  
+// Querying:
+select[Person] where(_.name :== "John", _.lastName :== "john@lennon.org")
+
+
+
